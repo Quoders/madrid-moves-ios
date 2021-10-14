@@ -23,6 +23,9 @@
 		C55564DA244231A300EC7433 /* madrid_moves_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55564D9244231A300EC7433 /* madrid_moves_iosTests.swift */; };
 		C55564E5244231A300EC7433 /* madrid_moves_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55564E4244231A300EC7433 /* madrid_moves_iosUITests.swift */; };
 		C5A4933B2468B67400E591F5 /* LinesApiData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A4933A2468B67400E591F5 /* LinesApiData.swift */; };
+		C5B2B671262EA13300EC68E3 /* all_lines_emt.json in Resources */ = {isa = PBXBuildFile; fileRef = C5B2B670262EA13300EC68E3 /* all_lines_emt.json */; };
+		C5B2B67E262EA57600EC68E3 /* LinesLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B2B67D262EA57500EC68E3 /* LinesLocalDataSource.swift */; };
+		C5EBD4072637DA37007C1CA0 /* LinesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EBD4062637DA37007C1CA0 /* LinesData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		C55564E4244231A300EC7433 /* madrid_moves_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = madrid_moves_iosUITests.swift; sourceTree = "<group>"; };
 		C55564E6244231A300EC7433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5A4933A2468B67400E591F5 /* LinesApiData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesApiData.swift; sourceTree = "<group>"; };
+		C5B2B670262EA13300EC68E3 /* all_lines_emt.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = all_lines_emt.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
+		C5B2B67D262EA57500EC68E3 /* LinesLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesLocalDataSource.swift; sourceTree = "<group>"; };
+		C5EBD4062637DA37007C1CA0 /* LinesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinesData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,27 +101,11 @@
 		C502C132245969EC002F5DB1 /* remote */ = {
 			isa = PBXGroup;
 			children = (
-				C502C133245969FC002F5DB1 /* model */,
+				C5A4933A2468B67400E591F5 /* LinesApiData.swift */,
+				C502C13424596A14002F5DB1 /* LoginApiData.swift */,
 				C5368CBE2456B8140079CB14 /* EmtRemoteService.swift */,
 			);
 			path = remote;
-			sourceTree = "<group>";
-		};
-		C502C133245969FC002F5DB1 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				C502C13424596A14002F5DB1 /* LoginApiData.swift */,
-				C5A4933A2468B67400E591F5 /* LinesApiData.swift */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		C5368CB82455FF110079CB14 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				C5368CB92455FF430079CB14 /* Line.swift */,
-			);
-			path = model;
 			sourceTree = "<group>";
 		};
 		C5368CBB2456005C0079CB14 /* data */ = {
@@ -185,11 +175,38 @@
 		C55564F2244446F900EC7433 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				C5B2B67C262EA55300EC68E3 /* local */,
+				C5B2B678262EA21100EC68E3 /* model */,
+				C5B2B66F262EA0C900EC68E3 /* resources */,
 				C502C132245969EC002F5DB1 /* remote */,
-				C5368CB82455FF110079CB14 /* model */,
 				C5368CB62455FE660079CB14 /* LinesRepository.swift */,
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		C5B2B66F262EA0C900EC68E3 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				C5B2B670262EA13300EC68E3 /* all_lines_emt.json */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		C5B2B678262EA21100EC68E3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				C5368CB92455FF430079CB14 /* Line.swift */,
+				C5EBD4062637DA37007C1CA0 /* LinesData.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		C5B2B67C262EA55300EC68E3 /* local */ = {
+			isa = PBXGroup;
+			children = (
+				C5B2B67D262EA57500EC68E3 /* LinesLocalDataSource.swift */,
+			);
+			path = local;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +272,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "David Guerrero";
 				TargetAttributes = {
 					C55564B9244231A200EC7433 = {
@@ -298,6 +315,7 @@
 			files = (
 				C55564CF244231A300EC7433 /* LaunchScreen.storyboard in Resources */,
 				C55564CC244231A300EC7433 /* Assets.xcassets in Resources */,
+				C5B2B671262EA13300EC68E3 /* all_lines_emt.json in Resources */,
 				C55564C7244231A200EC7433 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B2B67E262EA57600EC68E3 /* LinesLocalDataSource.swift in Sources */,
 				C55564CA244231A200EC7433 /* madrid_moves_ios.xcdatamodeld in Sources */,
 				C55564C4244231A200EC7433 /* SecondViewController.swift in Sources */,
 				C55564C2244231A200EC7433 /* FirstViewController.swift in Sources */,
@@ -333,6 +352,7 @@
 				C5368CBA2455FF430079CB14 /* Line.swift in Sources */,
 				C502C13524596A14002F5DB1 /* LoginApiData.swift in Sources */,
 				C5368CB72455FE660079CB14 /* LinesRepository.swift in Sources */,
+				C5EBD4072637DA37007C1CA0 /* LinesData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +434,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -438,7 +459,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -474,6 +495,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -492,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

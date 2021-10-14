@@ -10,14 +10,20 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet var viewLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+     
         
-        let linesRepository = LinesRepository(remoteService: EmtRemoteService())
-        linesRepository.getLines()
+        viewLabel.text  = "Hello World!"
+        
+        
+        
+        
     }
-
     
-
+    @IBAction func changeLabel(_ sender: UIButton) {
+    }
 }
 

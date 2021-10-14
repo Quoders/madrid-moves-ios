@@ -8,13 +8,21 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 50
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "linecell", for: indexPath) as UITableViewCell
+        cell.textLabel?.text = "test"
+        return cell
+    }
 }
 
